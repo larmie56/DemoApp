@@ -43,4 +43,13 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="name_of_task">Name of task</string>
+    <string name="amount">Task Details</string>
+    <string name="date_to_perform_task">Date to perform task</string>
+    <string name="priority">Task Priority</string>
+    <string name="additional_info">Additional info</string>
+    <string name="save">Save</string>
+    <string name="task_priority">Task Priority</string>
+    <string name="discard">Discard</string>
+    <string name="add_task">Add task</string>
 </resources>
