@@ -18,6 +18,8 @@ class TasksRepo(context: Context) {
 
     suspend fun getTask(id: Long): Tasks? = tasksDao.getTask(id)
 
+    suspend fun getAllTasks(): List<Tasks> = tasksDao.getAllTasks()
+
     suspend fun getTaskByDate(): List<Tasks> = tasksDao.getTaskByDate()
 
     suspend fun getTasksByPriority(): List<Tasks> = tasksDao.getTasksByPriority()

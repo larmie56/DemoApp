@@ -19,6 +19,9 @@ internal interface TasksDao {
     @Query("SELECT * FROM tasks WHERE id = :id")
     suspend fun getTask(id: Long): Tasks?
 
+    @Query("SELECT * FROM tasks")
+    suspend fun getAllTasks(): List<Tasks>
+
     @Query("SELECT * FROM tasks ORDER BY date ASC")
     suspend fun getTaskByDate(): List<Tasks>
 
