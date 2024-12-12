@@ -6,4 +6,6 @@ import com.example.demoapp.data.repo.TasksRepo
 class GetTaskUseCase(private val tasksRepo: TasksRepo) {
 
     suspend fun execute(id: Long): Tasks? = tasksRepo.getTask(id)
+
+
 }
