@@ -52,4 +52,5 @@
     <string name="task_priority">Task Priority</string>
     <string name="discard">Discard</string>
     <string name="add_task">Add task</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
