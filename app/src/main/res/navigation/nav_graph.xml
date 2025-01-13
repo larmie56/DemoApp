@@ -3,26 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/allTasksFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/allTasksFragment"
         android:name="com.example.demoapp.presentation.allTasks.AllTasksFragment"
-        android:label="@string/first_fragment_label"
+        android:label="All Tasks Fragment"
         tools:layout="@layout/fragment_all_tasks">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_allTasksFragment_to_editTaskFragment"
+            app:destination="@id/editTaskFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/editTaskFragment"
         android:name="com.example.demoapp.presentation.editTask.EditTaskFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Edit Task Fragment"
         tools:layout="@layout/fragment_edit_task">
 
+        <argument
+            android:name="taskId"
+            app:argType="long" />
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_editTaskFragment_to_allTasksFragment"
+            app:destination="@id/allTasksFragment" />
     </fragment>
 </navigation>
