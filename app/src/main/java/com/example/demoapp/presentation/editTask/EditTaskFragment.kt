@@ -34,7 +34,7 @@ class EditTaskFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSave.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(EditTaskFragmentDirections.actionEditTaskFragmentToAllTasksFragment())
         }
     }
 
