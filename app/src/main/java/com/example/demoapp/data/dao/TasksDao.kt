@@ -1,5 +1,6 @@
 package com.example.demoapp.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -8,7 +9,7 @@ import androidx.room.Update
 import com.example.demoapp.data.entity.Tasks
 
 @Dao
-internal interface TasksDao {
+interface TasksDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(task: Tasks): Long
@@ -20,7 +21,7 @@ internal interface TasksDao {
     suspend fun getTask(id: Long): Tasks?
 
     @Query("SELECT * FROM tasks")
-    suspend fun getAllTasks(): List<Tasks>
+    fun getAllTasks(): LiveData<List<Tasks>>
 
     @Query("SELECT * FROM tasks ORDER BY date ASC")
     suspend fun getTaskByDate(): List<Tasks>

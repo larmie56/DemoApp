@@ -8,7 +8,7 @@ import com.example.demoapp.data.dao.TasksDao
 import com.example.demoapp.data.entity.Tasks
 
 @Database(entities = [Tasks::class], version = 1, exportSchema = false)
-internal abstract class TodoDatabase : RoomDatabase() {
+abstract class TodoDatabase : RoomDatabase() {
 
     abstract val tasksDao: TasksDao
 

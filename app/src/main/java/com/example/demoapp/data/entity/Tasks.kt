@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "tasks")
-public data class Tasks(
+data class Tasks(
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name = "priority")

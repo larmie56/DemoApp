@@ -1,6 +1,7 @@
 package com.example.demoapp.data.repo
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import com.example.demoapp.data.TodoDatabase
 import com.example.demoapp.data.entity.Tasks
 
@@ -18,7 +19,7 @@ class TasksRepo(context: Context) {
 
     suspend fun getTask(id: Long): Tasks? = tasksDao.getTask(id)
 
-    suspend fun getAllTasks(): List<Tasks> = tasksDao.getAllTasks()
+    fun getAllTasks(): LiveData<List<Tasks>> = tasksDao.getAllTasks()
 
     suspend fun getTaskByDate(): List<Tasks> = tasksDao.getTaskByDate()
 
